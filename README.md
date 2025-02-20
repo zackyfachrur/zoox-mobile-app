@@ -1,5 +1,5 @@
 # Welcome to Zoox
-<img src="/screenshots/sign_in_screen.png" />
+<img src="/screenshots/sign_in_screen.png" width="200px" />
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
