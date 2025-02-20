@@ -1,5 +1,5 @@
 # Welcome to Zoox
-<div style="display: flex; flex-direction: row; gap: 20px;">
+<div style="display: flex; flex-direction: row; gap: 20px; justify-content: center; align-items: center; width: 100%;">
    <img src="/screenshots/sign_in_screen.png" width="200px" />
    <img src="/screenshots/loading_screen.png" width="200px" />
 </div>
