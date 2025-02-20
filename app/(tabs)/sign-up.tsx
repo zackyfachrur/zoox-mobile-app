@@ -10,11 +10,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import Mockup from "@/assets/images/signIn.png";
 import GoogleIcon from "@/assets/images/google-icon.jpg";
 import { Link } from "expo-router";
+import { useState, useEffect, useRef } from "react";
 import { FontAwesome } from "@expo/vector-icons";
-import { useState } from "react";
+import { useRouter } from "expo-router";
 
 export default function SignInScreen() {
   const [eye, setEye] = useState(true);
+  const Navigate = useRouter();
 
   return (
     <SafeAreaView
@@ -27,9 +29,14 @@ export default function SignInScreen() {
           Welcome to <Text className="font-bold text-red-600">Zoox</Text>
         </Text>
         <TextInput
+          placeholder="Username"
+          inputMode="text"
+          className="border-b py-2 w-[65%] mt-4 px-2"
+        />
+        <TextInput
           placeholder="Email Address"
-          className="border-b py-2  w-[65%] mt-4 px-2"
           inputMode="email"
+          className="border-b py-2 w-[65%] mt-4 px-2"
         />
         <View className="border-b w-[65%] mt-4 flex flex-row items-center px-1">
           <TextInput
@@ -49,19 +56,20 @@ export default function SignInScreen() {
         <TouchableOpacity
           activeOpacity={0.8}
           className="w-[65%] flex items-center rounded-md mt-4 py-1 font-semibold bg-red-600 border-2 border-red-700"
+          onPress={() => Navigate.push("/pages")}
         >
-          <Text className="text-xl font-semibold text-white">Sign In</Text>
+          <Text className="text-xl font-semibold text-white">Sign Up</Text>
         </TouchableOpacity>
         <TouchableOpacity
           activeOpacity={0.8}
-          className="w-[65%] flex items-center rounded-md mt-4 py-1 font-semibold bg-white border-2 border-red-700"
+          className="w-[65%] flex items-center justify-center rounded-md mt-4 py-1 font-semibold bg-white border-2 border-red-700"
         >
           <Image source={GoogleIcon} className="w-[25px] h-[25px]" />
         </TouchableOpacity>
         <Text className="mt-4">
-          Don't Have an Account ?{" "}
-          <Link href="/sign-up" className="font-bold text-red-500">
-            Sign Up
+          Already Have Account ?{" "}
+          <Link href="/" className="font-bold text-red-500">
+            Sign In
           </Link>
         </Text>
       </View>
