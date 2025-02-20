@@ -5,7 +5,7 @@ export default function HomeScreen() {
   return (
     <SafeAreaView className="flex-1 bg-white">
       <View>
-        <Text>Wazzup</Text>
+        <Text>Welcome to Home Screen</Text>
       </View>
     </SafeAreaView>
   );
